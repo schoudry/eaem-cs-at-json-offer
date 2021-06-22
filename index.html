@@ -33,6 +33,8 @@
     function loadXF() {
         var $aemOffer = $("#aem-offer");
 
+        alert("loading directly from publish....")
+
         $.ajax("https://publish-p10961-e90064.adobeaemcloud.com/content/experience-fragments/eaem-cs-at-json-offer/us/en/site/eaem-cs-one/master.html").done(function (html) {
             $aemOffer.html(html);
         }).fail(function () {
@@ -40,13 +42,13 @@
         });
     }
 
-    //loadXF();
+    loadXF();
 
-    function loadOffer() {
+    /*function loadOffer() {
         var $aemOffer = $("#aem-offer");
 
         adobe.target.getOffer({
-            mbox: 'eaem-cs-test-3',
+            mbox: 'eaem-test-1',
             success: function (offer) {
                 var offerJSON = JSON.parse(offer[0].content);
 
@@ -65,7 +67,7 @@
         })
     }
 
-    setTimeout(loadOffer, 3000);
+    setTimeout(loadOffer, 3000);*/
 </script>
 </body>
 
